@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Phone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 class="text-center display-5 fw-bold my-2">Your Favorite Phones...</h1>
+    <section class="container w-75 mx-auto text-center my-5">
+        <!-- search phone with button -->
+        <input id="search-input" class="w-75 p-2 bg-light rounded border border-primary" type="text"
+            placeholder="Search Your Phones...">
+        <button onclick="searchPhoneBtn()" type="button" class="mb-2 py-2 px-3 btn rounded btn-primary ">Search</button>
+    </section>
+
+    <!-- display card with js api -->
+    <section class="container">
+        <h1 class="text-center fw-bold my-5">Latest Official ✭ Phones in Bangladesh</h1>
+
+
+        <div id="phone-container" class="row row-cols-1 row-cols-md-4 g-4 container">
+
+
+        </div>
+
+        <section>
+            <!-- show message -->
+            <div id="show-msg" class="d-none">
+                <p class="text-danger text-center fs-2 my-5">Your search phone not found</p>
+            </div>
+        </section>
+    </section>
+    <!-- show all btn -->
+    <section id="show-all" class="text-center my-3 d-none">
+        <button id="showallbtn" onclick="showAllPhone()" type="button" class=" py-2 px-3 btn rounded btn-primary ">Show
+            All</button>
+    </section>
+    <br>
+    <section id="show-spinner" style="height: 300px;" class=" d-none justify-content-center align-items-center">
+        <!-- show spinner -->
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border text-success" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- modal sectiom=n ++++++++++ -->
+    <section>
+
+        <!-- Button trigger modal -->
+  
+
+        <!-- Modal -->
+        <div class="modal fade" id="details-modal" tabindex="-1" aria-labelledby="details-modalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="details-modal-title"></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div id="modal-body" class="modal-body text-center">
+                        
+                      
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
